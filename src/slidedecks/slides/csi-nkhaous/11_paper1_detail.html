@@ -1,80 +1,89 @@
-<div class="csi-slide accent-results-slide">
+<div class="csi-slide taln-method-slide">
 
 <style>
-.accent-results-slide .results-content {
+.taln-method-slide .dataset-strip {
     display: grid;
-    grid-template-rows: 1fr 1.28fr;
-    gap: 14px;
-    width: 95%;
-    margin: 20px auto 0;
+    grid-template-columns: 1.45fr 1fr 1fr;
+    gap: 12px;
+    width: 92%;
+    margin: 30px auto 28px;
 }
 
-.accent-results-slide .result-figure {
-    position: relative;
-    padding: 10px 14px 7px;
-    border: 1px solid #dfe7ea;
-    border-radius: 10px;
-    background: white;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, .06);
-}
-
-.accent-results-slide .figure-label {
-    position: absolute;
-    top: 10px;
-    left: 14px;
-    z-index: 2;
-    padding: 5px 10px;
-    border-radius: 999px;
-    background: var(--c);
-    color: white;
-    font-size: 13px;
+.taln-method-slide .dataset-item {
+    display: flex;
+    min-height: 58px;
+    padding: 10px 14px;
+    border-left: 5px solid #277C9D;
+    border-radius: 8px;
+    background: #eef7fb;
+    align-items: center;
+    justify-content: center;
+    color: #277C9D;
+    font-size: 18px;
     font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
 }
 
-.accent-results-slide .result-figure img {
+.taln-method-slide .visual-stage {
+    position: relative;
+    width: 88%;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.taln-method-slide .visual-layer {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+
+.taln-method-slide .visual-layer img {
     display: block;
-    width: 100%;
-    height: 190px;
+    max-height: 100%;
     margin: 0;
     object-fit: contain;
 }
 
-.accent-results-slide .result-figure.correlation img {
-    height: 235px;
+/* Ajuste ces deux valeurs pour modifier séparément la taille des figures. */
+.taln-method-slide .table-layer img {
+    width: 67%;
 }
 
-.accent-results-slide .paper-conclusion {
-    width: 92%;
-    margin: 17px auto 0;
-    padding: 12px 20px;
-    border-left: 6px solid #c85a26;
-    border-radius: 8px;
-    background: #fbf1e9;
-    color: #854b2f;
-    font-size: 17px;
-    font-weight: bold;
-    text-align: center;
+.taln-method-slide .equation-layer img {
+    width: 86%;
+}
+
+.taln-method-slide .table-layer {
+    z-index: 1;
+}
+
+.taln-method-slide .equation-layer {
+    z-index: 2;
 }
 </style>
 
-<p class="titlebox">L'accent persiste dans les représentations de la parole</p>
+<p class="titlebox">L'accent comme structure géométrique persistante dans les représentations de la parole</p>
 
-<div class="results-content">
-    <div class="result-figure" style="--c:#598938;">
-        <div class="figure-label">Structure accentuelle persistante</div>
-        <img src="../assets/figures/csi-nkhaous/accent_intra_inter.png"
-             alt="Distances intra et inter-clusters au fil des couches de Whisper et wav2vec 2.0">
-    </div>
-
-    <div class="result-figure correlation" style="--c:#277C9D;">
-        <div class="figure-label">Distance au natif → erreurs de transcription</div>
-        <img src="../assets/figures/csi-nkhaous/accent_correlation.png"
-             alt="Corrélation entre distance au centroïde natif américain et taux d'erreur sur les mots">
-    </div>
+<div class="dataset-strip fragment" data-fragment-index="0">
+    <div class="dataset-item">Speech Accent Archive</div>
+    <div class="dataset-item">2&nbsp;140 speech samples</div>
+    <div class="dataset-item">214 different native languages</div>
 </div>
 
-<div class="paper-conclusion">
-    Plus un accent est éloigné de la référence native dans l'espace des représentations, plus le taux d'erreur augmente.
+<div class="visual-stage">
+    <div class="visual-layer table-layer fragment" data-fragment-index="1">
+        <img src="../assets/figures/csi-nkhaous/ssl-models-accented-speech-table.png"
+             alt="WER des modèles selon la langue maternelle des locuteurs">
+    </div>
+
+    <div class="visual-layer equation-layer fragment" data-fragment-index="2">
+        <img src="../assets/figures/csi-nkhaous/native-centroid.png"
+             alt="Distance d'un locuteur au centroïde de référence natif">
+    </div>
 </div>
 
 </div>

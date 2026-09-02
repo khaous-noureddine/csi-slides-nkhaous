@@ -88,9 +88,38 @@
 .thesis-context-slide .table-panel img {
     display: block;
     width: 100%;
-    height: 275px;
+    height: auto;
     margin: 0;
-    object-fit: contain;
+}
+
+.thesis-context-slide .table-image-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.thesis-context-slide .table-highlight {
+    position: absolute;
+    top: 2.5%;
+    bottom: 2.5%;
+    border: 3px solid var(--highlight-color);
+    border-radius: 4px;
+    background: var(--highlight-background);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, .75);
+    pointer-events: none;
+}
+
+.thesis-context-slide .native-highlight {
+    left: 19.8%;
+    width: 16.9%;
+    --highlight-color: #c85a26;
+    --highlight-background: rgba(200, 90, 38, .05);
+}
+
+.thesis-context-slide .non-native-highlight {
+    left: 37.1%;
+    width: 8.8%;
+    --highlight-color: #598938;
+    --highlight-background: rgba(89, 137, 56, .07);
 }
 
 .thesis-context-slide .table-caption {
@@ -104,10 +133,10 @@
     width: 90%;
     margin: 34px auto 0;
     padding: 15px 22px;
-    border-left: 6px solid #598938;
+    border-left: 6px solid #0f9fdc;
     border-radius: 9px;
     background: #eef5e9;
-    color: #385a26;
+    color: #000000;
     font-size: 18px;
     font-weight: 600;
     line-height: 1.35;
@@ -115,7 +144,7 @@
 }
 
 .thesis-context-slide .thesis-positioning strong {
-    color: #598938;
+    color: #0f9fdc;
 }
 </style>
 
@@ -152,17 +181,24 @@
         </div>
     </div>
 
-    <div class="table-panel">
+    <div class="table-panel fragment" data-fragment-index="2">
         <div class="table-title">WER (%) sur la parole accentuée</div>
-        <img src="../assets/figures/csi-nkhaous/ssl-models-accented-speech-table.png"
-             alt="Taux d'erreur par modèle pour la parole native et non native">
-        <div class="table-caption">Speech Accent Archive · Khaous &amp; Wisniewski, TALN 2026</div>
+        <div class="table-image-wrap">
+            <img src="../assets/figures/csi-nkhaous/ssl-models-accented-speech-table.png"
+                 alt="Taux d'erreur par modèle pour la parole native et non native">
+            <div class="table-highlight native-highlight fragment" data-fragment-index="3"
+                 aria-label="Mise en évidence des colonnes US natif et autre natif"></div>
+            <div class="table-highlight non-native-highlight fragment" data-fragment-index="4"
+                 aria-label="Mise en évidence de la colonne non native"></div>
+        </div>
+        <div class="table-caption">Khaous &amp; Wisniewski (2026). L’accent comme structure géométrique persistante
+dans les représentations de la parole. CORIA-TALN</div>
     </div>
 </div>
 
-<div class="thesis-positioning fragment" data-fragment-index="2">
-    <strong>Positionnement de la thèse :</strong>
-    analyser les représentations internes pour comprendre ces écarts et développer des modèles plus robustes aux variations.
+<div class="thesis-positioning fragment" data-fragment-index="5">
+    <!-- <strong>Positionnement :</strong> -->
+    Analyser les représentations internes pour comprendre ces écarts et développer des modèles plus robustes aux variations.
 </div>
 
 </div>

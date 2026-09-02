@@ -1,0 +1,82 @@
+<div class="csi-slide taln-results-slide">
+
+<style>
+.taln-results-slide {
+    padding: 0;
+}
+
+.taln-results-slide .results-figures {
+    position: relative;
+    height: 610px;
+    padding: 15px 25px 10px;
+}
+
+.taln-results-slide .result-panel {
+    position: absolute;
+    inset: 15px 25px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.taln-results-slide .correlation-figure,
+.taln-results-slide .clusters-figure {
+    display: block;
+    width: 96%;
+    margin: 0;
+    object-fit: contain;
+}
+
+.taln-results-slide .correlation-figure {
+    height: 390px;
+}
+
+.taln-results-slide .clusters-figure {
+    height: 390px;
+}
+
+.taln-results-slide .result-takeaway {
+    display: flex;
+    align-items: center;
+    width: 88%;
+    margin-top: 24px;
+    color: #26343c;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.35;
+    text-align: left;
+}
+
+.taln-results-slide .result-takeaway::before {
+    content: "➜";
+    flex: 0 0 auto;
+    margin-right: 16px;
+    color: var(--c);
+    font-size: 34px;
+}
+</style>
+
+<p class="titlebox">L'accent comme structure géométrique persistante dans les représentations de la parole</p>
+
+<div class="results-figures">
+    <div class="result-panel fragment fade-out" data-fragment-index="0">
+        <img class="correlation-figure"
+             src="../assets/figures/csi-nkhaous/accent_correlation.png"
+             alt="Corrélation entre la distance au centroïde natif et le taux d'erreur">
+        <div class="result-takeaway" style="--c:#277C9D;">
+            La proximité au centroïde natif constitue un bon indicateur des performances ASR : plus une représentation en est proche, plus le taux d'erreur est faible.
+        </div>
+    </div>
+
+    <div class="result-panel fragment fade-in" data-fragment-index="0">
+        <img class="clusters-figure"
+             src="../assets/figures/csi-nkhaous/accent_intra_inter.png"
+             alt="Distances intra et inter-clusters dans les couches de Whisper et wav2vec 2.0">
+        <div class="result-takeaway" style="--c:#598938;">
+            L'accent est explicitement encodé dans les représentations.
+        </div>
+    </div>
+</div>
+
+</div>

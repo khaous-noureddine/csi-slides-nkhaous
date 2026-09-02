@@ -3,15 +3,15 @@
 <style>
 .thesis-positioning-slide .positioning-flow {
     display: grid;
-    grid-template-columns: 1fr 54px 1fr 54px 1fr;
+    grid-template-columns: 1fr 34px 1fr 34px 1fr;
     align-items: center;
-    width: 90%;
-    margin: 44px auto 38px;
+    width: 78%;
+    margin: 32px auto 50px;
 }
 
 .thesis-positioning-slide .positioning-step {
-    min-height: 155px;
-    padding: 20px 16px;
+    min-height: 105px;
+    padding: 12px 11px;
     border: 1px solid #dfe7ea;
     border-top: 6px solid var(--c);
     border-radius: 10px;
@@ -21,21 +21,21 @@
 }
 
 .thesis-positioning-slide .step-name {
-    margin-bottom: 13px;
+    margin-bottom: 8px;
     color: var(--c);
-    font-size: 25px;
+    font-size: 22px;
     font-weight: bold;
 }
 
 .thesis-positioning-slide .step-text {
     color: #52626a;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.35;
 }
 
 .thesis-positioning-slide .positioning-arrow {
     color: #8ca0a9;
-    font-size: 36px;
+    font-size: 31px;
     font-weight: bold;
     text-align: center;
 }
@@ -43,24 +43,24 @@
 .thesis-positioning-slide .questions-title {
     margin-bottom: 17px;
     color: #000;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     text-align: center;
 }
 
 .thesis-positioning-slide .questions-list {
     display: flex;
-    width: 86%;
+    width: 88%;
     margin: 0 auto;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
 }
 
 .thesis-positioning-slide .research-question {
-    padding: 3px 0 3px 15px;
+    padding: 4px 0 4px 15px;
     border-left: 5px solid var(--c);
     color: #27343a;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.35;
     text-align: left;
 }
@@ -70,6 +70,10 @@
     color: var(--c);
     font-weight: bold;
 }
+
+/* .questions-title {
+    margin-top: 50px;
+} */
 </style>
 
 <p class="titlebox">Contexte et motivation de la thèse</p>
@@ -95,18 +99,22 @@
     </div>
 </div>
 
-<div class="questions-title">Questions de recherche</div>
+
+<div style="height: 35px;"></div>
+
+
+<div class="questions-title fragment" data-fragment-index="0">Questions de recherche</div>
 
 <div class="questions-list">
-    <div class="research-question" style="--c:#277C9D;">
+    <div class="research-question fragment" data-fragment-index="0" style="--c:#277C9D;">
         <span class="question-number">Q1.</span>
+        Comment les variations de la parole, notamment les accents, sont-elles encodées dans les représentations internes des modèles de parole&nbsp;?
+    </div>
+    <div class="research-question fragment" data-fragment-index="1" style="--c:#598938;">
+        <span class="question-number">Q2.</span>
         Quelles informations linguistiques émergent au cours du préentraînement&nbsp;?
     </div>
-    <div class="research-question" style="--c:#598938;">
-        <span class="question-number">Q2.</span>
-        Comment les accents et la quantité de données transforment-ils les représentations&nbsp;?
-    </div>
-    <div class="research-question" style="--c:#c85a26;">
+    <div class="research-question fragment" data-fragment-index="2" style="--c:#c85a26;">
         <span class="question-number">Q3.</span>
         Comment exploiter ces analyses pour améliorer la robustesse de l'ASR&nbsp;?
     </div>
