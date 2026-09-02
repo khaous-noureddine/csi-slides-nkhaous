@@ -25,6 +25,19 @@ npm run preview
 
 Les fichiers générés sont placés dans `dist/`.
 
+## Publication sur GitHub Pages
+
+Chaque push sur la branche `main` déclenche le workflow GitHub Actions situé dans
+`.github/workflows/deploy.yml`.
+
+Dans les paramètres du dépôt GitHub, sélectionner :
+
+`Settings → Pages → Build and deployment → Source → GitHub Actions`
+
+La présentation sera publiée à l'adresse :
+
+`https://khaous-noureddine.github.io/csi-slides-nkhaous/`
+
 ## Organisation
 
 - `src/slidedecks/csi-nkhaous.html` : ordre et configuration des slides ;
