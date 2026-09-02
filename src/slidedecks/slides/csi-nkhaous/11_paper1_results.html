@@ -33,7 +33,15 @@
 }
 
 .taln-results-slide .clusters-figure {
-    height: 390px;
+    height: 340px;
+}
+
+.taln-results-slide .figure-title {
+    margin-bottom: 12px;
+    color: #26343c;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
 }
 
 .taln-results-slide .result-takeaway {
@@ -61,6 +69,7 @@
 
 <div class="results-figures">
     <div class="result-panel fragment fade-out" data-fragment-index="0">
+        <div class="figure-title">Corrélation entre le déplacement représentationnel induit par l'accent et les taux d'erreur de reconnaissance automatique de la parole (ASR).</div>
         <img class="correlation-figure"
              src="../assets/figures/csi-nkhaous/accent_correlation.png"
              alt="Corrélation entre la distance au centroïde natif et le taux d'erreur">
@@ -70,6 +79,7 @@
     </div>
 
     <div class="result-panel fragment fade-in" data-fragment-index="0">
+        <div class="figure-title">Distances intra et inter-clusters des groupes d'accents</div>
         <img class="clusters-figure"
              src="../assets/figures/csi-nkhaous/accent_intra_inter.png"
              alt="Distances intra et inter-clusters dans les couches de Whisper et wav2vec 2.0">

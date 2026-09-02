@@ -1,4 +1,32 @@
-<div class="csi-slide paper-todo-slide">
+<div class="csi-slide paper3-detail-slide">
+    <style>
+        .paper3-detail-slide .paper3-points {
+            width: 86%;
+            margin: 62px auto 0;
+            padding-left: 34px;
+            color: #26343c;
+            font-size: 21px;
+            line-height: 1.45;
+            text-align: left;
+        }
+
+        .paper3-detail-slide .paper3-points li {
+            margin-bottom: 25px;
+            padding-left: 10px;
+        }
+
+        .paper3-detail-slide .paper3-points li::marker {
+            color: #277C9D;
+            font-size: 1.25em;
+        }
+    </style>
+
     <p class="titlebox">Learning Curves and the Emergence of Speech Representations across Training Data Scales</p>
-    <div class="todo">TODO</div>
+
+    <ul class="paper3-points">
+        <li>Les versions finales des modèles de parole acquièrent spontanément des compétences linguistiques et phonologiques.</li>
+        <!-- <li>Nous ignorons encore <strong>quand et comment</strong> ces connaissances émergent au cours de l'apprentissage.</li> -->
+        <li>Nous entraînons <strong>wav2vec 2.0 Base</strong> from scratch sur plusieurs volumes de données, en conservant les checkpoints intermédiaires.</li>
+        <li>Les premières expériences utilisent des sondes pour la détection des phonèmes ; d'autres analyses seront ajoutées par la suite.</li>
+    </ul>
 </div>

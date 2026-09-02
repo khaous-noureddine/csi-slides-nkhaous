@@ -1,4 +1,64 @@
-<div class="csi-slide paper-todo-slide">
+<div class="csi-slide paper2-detail-slide">
+    <style>
+        .paper2-detail-slide .paper2-content {
+            display: grid;
+            grid-template-columns: 47% 53%;
+            align-items: center;
+            width: 91%;
+            margin: 28px auto 0;
+        }
+
+        .paper2-detail-slide .method-points {
+            margin: 0;
+            padding-left: 28px;
+            color: #26343c;
+            font-size: 18px;
+            line-height: 1.45;
+            text-align: left;
+        }
+
+        .paper2-detail-slide .method-points li {
+            margin-bottom: 24px;
+            padding-left: 9px;
+        }
+
+        .paper2-detail-slide .method-points li::marker {
+            color: #277C9D;
+            font-size: 1.25em;
+        }
+
+        .paper2-detail-slide .cluster-figure {
+            display: block;
+            width: auto;
+            height: 475px;
+            margin: 0 auto;
+            object-fit: contain;
+        }
+
+        .paper2-detail-slide .objective {
+            width: 86%;
+            margin: 16px auto 0;
+            color: #277C9D;
+            font-size: 19px;
+            font-weight: 700;
+            text-align: center;
+        }
+    </style>
+
     <p class="titlebox">Accent-Unified Representations for Robust ASR via Supervised Contrastive Learning</p>
-    <div class="todo">TODO</div>
+
+    <div class="paper2-content">
+        <ul class="method-points">
+            <li class="fragment" data-fragment-index="0"><strong>Suite du premier travail :</strong> intervenir sur les représentations pour rendre le modèle plus robuste aux changements d'accent.</li>
+            <li class="fragment" data-fragment-index="1"><strong>Données :</strong> L2-ARCTIC contient les mêmes phrases prononcées par plusieurs locuteurs aux accents différents.</li>
+            <li class="fragment" data-fragment-index="2"><strong>Positifs :</strong> même contenu linguistique, quels que soient le locuteur et son accent.</li>
+            <li class="fragment" data-fragment-index="2"><strong>Négatifs :</strong> contenus linguistiques différents.</li>
+        </ul>
+
+        <img class="cluster-figure fragment" data-fragment-index="3"
+             src="../assets/figures/csi-nkhaous/paper2-content-clusters.png"
+             alt="Organisation des représentations par contenu linguistique avant et après apprentissage contrastif">
+    </div>
+
+    <div class="objective fragment" data-fragment-index="3">Objectif : réduire le regroupement induit par l'accent tout en préservant l'information linguistique.</div>
 </div>
