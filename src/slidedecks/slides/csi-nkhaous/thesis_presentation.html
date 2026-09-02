@@ -1,0 +1,168 @@
+<div class="csi-slide thesis-context-slide">
+
+<style>
+.thesis-context-slide .context-layout {
+    display: grid;
+    grid-template-columns: 41% 59%;
+    gap: 28px;
+    width: 94%;
+    margin: 34px auto 0;
+    align-items: center;
+}
+
+.thesis-context-slide .context-points {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.thesis-context-slide .context-point {
+    display: grid;
+    grid-template-columns: 13px 1fr;
+    gap: 15px;
+    text-align: left;
+}
+
+.thesis-context-slide .context-marker {
+    width: 10px;
+    height: 10px;
+    margin-top: 8px;
+    border-radius: 50%;
+    background: var(--c);
+    box-shadow: 0 0 0 5px color-mix(in srgb, var(--c) 16%, transparent);
+}
+
+.thesis-context-slide .point-title {
+    margin-bottom: 8px;
+    color: var(--c);
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.thesis-context-slide .point-text {
+    color: #3e4e56;
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.thesis-context-slide .model-names {
+    display: block;
+    margin-top: 8px;
+    color: #6a7981;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.thesis-context-slide .variation-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.thesis-context-slide .variation {
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: #fbf1e9;
+    color: #9b5938;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.thesis-context-slide .table-panel {
+    padding: 15px 15px 11px;
+    border: 1px solid #dfe7ea;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 2px 4px 11px rgba(0, 0, 0, .07);
+}
+
+.thesis-context-slide .table-title {
+    margin-bottom: 5px;
+    color: #27363d;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.thesis-context-slide .table-panel img {
+    display: block;
+    width: 100%;
+    height: 275px;
+    margin: 0;
+    object-fit: contain;
+}
+
+.thesis-context-slide .table-caption {
+    margin-top: 3px;
+    color: #77868d;
+    font-size: 11px;
+    text-align: center;
+}
+
+.thesis-context-slide .thesis-positioning {
+    width: 90%;
+    margin: 34px auto 0;
+    padding: 15px 22px;
+    border-left: 6px solid #598938;
+    border-radius: 9px;
+    background: #eef5e9;
+    color: #385a26;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35;
+    text-align: center;
+}
+
+.thesis-context-slide .thesis-positioning strong {
+    color: #598938;
+}
+</style>
+
+<p class="titlebox">Contexte et motivation de la thèse</p>
+
+<div class="context-layout">
+    <div class="context-points">
+        <div class="context-point fragment" data-fragment-index="0" style="--c:#277C9D;">
+            <span class="context-marker"></span>
+            <div>
+                <div class="point-title">Des modèles très performants</div>
+                <div class="point-text">
+                    L'apprentissage auto-supervisé et les Transformers ont profondément amélioré la transcription automatique de la parole.
+                    <span class="model-names">wav2vec&nbsp;2.0 · HuBERT · WavLM</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="context-point fragment" data-fragment-index="1" style="--c:#c85a26;">
+            <span class="context-marker"></span>
+            <div>
+                <div class="point-title">Mais encore fragiles</div>
+                <div class="point-text">
+                    De petites variations de la parole peuvent entraîner des écarts de performance considérables.
+                    <div class="variation-list">
+                        <span class="variation">Microphone</span>
+                        <span class="variation">Bruit</span>
+                        <span class="variation">Locuteur</span>
+                        <span class="variation">Langue</span>
+                        <span class="variation">Accent</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-panel">
+        <div class="table-title">WER (%) sur la parole accentuée</div>
+        <img src="../assets/figures/csi-nkhaous/ssl-models-accented-speech-table.png"
+             alt="Taux d'erreur par modèle pour la parole native et non native">
+        <div class="table-caption">Speech Accent Archive · Khaous &amp; Wisniewski, TALN 2026</div>
+    </div>
+</div>
+
+<div class="thesis-positioning fragment" data-fragment-index="2">
+    <strong>Positionnement de la thèse :</strong>
+    analyser les représentations internes pour comprendre ces écarts et développer des modèles plus robustes aux variations.
+</div>
+
+</div>
