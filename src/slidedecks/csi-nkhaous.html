@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="#"/>
+
+    <title>CSI Thèse Noureddine Khaous</title>
+
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/iabm.css">
+    <link rel="stylesheet" href="css/csi-nkhaous.css">
+    <link rel="stylesheet" href="revealjs_plugins/highlight/github.css">
+</head>
+<body>
+
+<div class="reveal">
+    <div class="slides">
+        <section
+            id="title"
+            data-external="/slidedecks/slides/csi-nkhaous/0_title.html"
+            data-menu-title="Title">
+        </section>
+        <section
+            id="biography"
+            data-external="/slidedecks/slides/csi-nkhaous/1_biography.html"
+            data-menu-title="Biography">
+        </section>
+        <section id="thesis-presentation" data-external="/slidedecks/slides/csi-nkhaous/2_thesis_presentation.html" data-menu-title="Présentation de la thèse"></section>
+        <section id="asr-limits" data-external="/slidedecks/slides/csi-nkhaous/8_asr_limits.html" data-menu-title="Contexte de la thèse"></section>
+        <section id="thesis-problem" data-external="/slidedecks/slides/csi-nkhaous/9_thesis_problem.html" data-menu-title="Problématique"></section>
+        <section id="scientific-contributions" data-external="/slidedecks/slides/csi-nkhaous/contributions.html" data-menu-title="Productions scientifiques"></section>
+        <section id="paper-1-focus" data-external="/slidedecks/slides/csi-nkhaous/10_paper1_focus.html" data-menu-title="Focus article 1"></section>
+        <section id="paper-1-detail" data-external="/slidedecks/slides/csi-nkhaous/11_paper1_detail.html" data-menu-title="Article 1"></section>
+        <section id="paper-2-focus" data-external="/slidedecks/slides/csi-nkhaous/12_paper2_focus.html" data-menu-title="Focus article 2"></section>
+        <section id="paper-2-detail" data-external="/slidedecks/slides/csi-nkhaous/13_paper2_detail.html" data-menu-title="Article 2"></section>
+        <section id="paper-3-focus" data-external="/slidedecks/slides/csi-nkhaous/14_paper3_focus.html" data-menu-title="Focus article 3"></section>
+        <section id="paper-3-detail" data-external="/slidedecks/slides/csi-nkhaous/15_paper3_detail.html" data-menu-title="Article 3"></section>
+        <section
+            id="doctoral-training"
+            data-external="/slidedecks/slides/csi-nkhaous/doctoral-training.html"
+            data-menu-title="Formations doctorales">
+        </section>
+        <section
+            id="thank-you"
+            data-external="/slidedecks/slides/csi-nkhaous/thankyou.html"
+            data-menu-title="Remerciements">
+        </section>
+    </div>
+</div>
+<script src="../main.js" type="module"></script> 
+
+<script type="module">
+    import Reveal from "reveal.js"
+    import "reveal.js/dist/reveal.css"
+    import "reveal.js/dist/theme/simple.css"
+    import External from "./revealjs_plugins/external"
+    import RevealMenu from "./revealjs_plugins/menu/menu.esm.js"
+    import highlight from "./revealjs_plugins/highlight/plugin.js"
+
+    Reveal.initialize({
+        showHiddenSlides: false,
+        hash: true,
+        slideNumber: 'c/t',
+        autoPlayMedia: true,
+        navigationMode: 'linear',
+        plugins: [External, highlight, RevealMenu],
+        viewDistance: 1,
+        menu: {
+            side: 'left',
+            hideMissingTitles: true,
+            markers: true,
+            numbers: true,
+            path: "../revealjs_plugins/menu",
+        },
+        highlight: {
+            hightlightOnLoad: false,
+        }
+    })
+
+    Reveal.on("externalready", async () => {
+        console.log("Reveal external ready!")
+        Reveal.getPlugin("highlight").init(Reveal);
+    });
+</script>
+
+<style>
+  * { cursor: none; }
+  #laser {
+    position: fixed;
+    width: 16px;
+    height: 16px;
+    background: red;
+    border-radius: 50%;
+    box-shadow: 0 0 20px red;
+    pointer-events: none;
+    z-index: 99999;
+  }
+</style>
+
+<div id="laser"></div>
+
+<script>
+  document.onmousemove = e => {
+    laser.style.left = e.clientX + "px";
+    laser.style.top = e.clientY + "px";
+  };
+</script>
+
+</body>
+</html>

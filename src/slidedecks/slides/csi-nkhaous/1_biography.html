@@ -1,0 +1,322 @@
+<div class="bio-slide">
+
+<style>
+.bio-slide {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: "Computer Modern Sans", Arial, sans-serif;
+    color: #222;
+    overflow: hidden;
+}
+
+.bio-slide * {
+    box-sizing: border-box;
+}
+
+.bio-slide .titlebox {
+    background-color: #62BCDD;
+    color: white;
+    border-radius: .3em .3em 0 0;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+.bio-slide .subtitlebox {
+    background-color: #d7eaf1;
+    border-radius: 0 0 .3em .3em;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+.bio-slide .legend {
+    display: flex;
+    justify-content: center;
+    gap: 26px;
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.bio-slide .legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.bio-slide .legend i {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.bio-slide .timeline-h {
+    position: relative;
+    width: 96%;
+    height: 470px;
+    margin: 4px auto 0;
+}
+
+.bio-slide .axis-line {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    right: 40px;
+    height: 3px;
+    background: #cdd9df;
+    border-radius: 2px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.bio-slide .nodes {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    padding: 0 38px;
+}
+
+.bio-slide .node {
+    position: relative;
+    flex: 1;
+}
+
+.bio-slide .dot {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--c);
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px var(--c);
+    z-index: 3;
+}
+
+.bio-slide .node.current .dot {
+    width: 22px;
+    height: 22px;
+    box-shadow: 0 0 0 3px var(--c), 0 0 0 9px rgba(39, 124, 157, 0.18);
+}
+
+.bio-slide .stem {
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 40px;
+    background: #cdd9df;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.bio-slide .node.top .stem { bottom: 50%; }
+.bio-slide .node.bottom .stem { top: 50%; }
+
+.bio-slide .card {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    min-height: 130px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 4px 5px 12px rgba(0, 0, 0, 0.13);
+    padding: 9px 10px;
+    text-align: center;
+    border-top: 3px solid var(--c);
+    z-index: 4;
+}
+
+.bio-slide .node.top .card { bottom: calc(50% + 40px); }
+.bio-slide .node.bottom .card { top: calc(50% + 40px); }
+
+.bio-slide .logo {
+    max-height: 30px;
+    max-width: 100px;
+    margin: 0 auto 5px;
+    display: block;
+    object-fit: contain;
+}
+
+.bio-slide .logo-placeholder {
+    height: 30px;
+    min-width: 70px;
+    width: fit-content;
+    margin: 0 auto 5px;
+    padding: 5px 9px;
+    border: 1px dashed #aab7bd;
+    border-radius: 5px;
+    color: #87959c;
+    font-size: 10px;
+    line-height: 18px;
+}
+
+.bio-slide .orange-logo {
+    height: 30px;
+    width: 30px;
+    margin: 0 auto 5px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 3px;
+    background: #ff7900;
+    color: white;
+    font: bold 7px Arial, sans-serif;
+}
+
+.bio-slide .main {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.15;
+}
+
+.bio-slide .dates {
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--c);
+    margin-top: 3px;
+}
+
+.bio-slide .place {
+    font-size: 10.5px;
+    color: #555;
+    margin-top: 2px;
+    line-height: 1.2;
+}
+
+.bio-slide .desc {
+    font-size: 10px;
+    color: #777;
+    margin-top: 3px;
+    line-height: 1.25;
+}
+
+.bio-slide .date-axis {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    font-weight: bold;
+    color: #9aa6ac;
+    white-space: nowrap;
+}
+
+.bio-slide .node.top .date-axis { top: calc(50% + 9px); }
+.bio-slide .node.bottom .date-axis { bottom: calc(50% + 9px); }
+</style>
+
+<p class="titlebox">Biographie</p>
+<p class="subtitlebox">Formation et expériences professionnelles</p>
+
+<div class="legend">
+    <span><i style="background:#277C9D;"></i>Formation</span>
+    <span><i style="background:#598938;"></i>Expériences professionnelles</span>
+</div>
+
+<div class="timeline-h">
+    <div class="axis-line"></div>
+
+    <div class="nodes">
+
+        <!-- 1. Classes préparatoires -->
+        <div class="node top fragment" data-fragment-index="0" style="--c:#277C9D;">
+            <div class="card">
+                <img class="logo" src="../assets/brands/logo-enp.png" alt="Logo de l'École Nationale Polytechnique">
+                <div class="main">Classes préparatoires</div>
+                <div class="dates">Sep. 2019 – Juin. 2021</div>
+                <div class="place">École Nationale Polytechnique · Alger</div>
+                <div class="desc">Filière mathématiques et physique.</div>
+            </div>
+            <div class="stem"></div>
+            <div class="dot"></div>
+            <div class="date-axis">2019</div>
+        </div>
+
+        <!-- 2. Licence Lyon 1 -->
+        <div class="node bottom fragment" data-fragment-index="1" style="--c:#277C9D;">
+            <div class="card">
+                <!-- Remplacer ce bloc par le logo de Lyon 1. -->
+                <img class="logo" src="../assets/brands/logo-cb-lyon1.jpg" alt="Logo de l'Université Claude Bernard Lyon 1">
+                <div class="main">Licence Électronique &amp; Automatique</div>
+                <div class="dates">Sep. 2021 – Juin. 2023</div>
+                <div class="place">Université Claude Bernard Lyon 1</div>
+                <div class="desc">Électronique, génie électrique et automatique.</div>
+            </div>
+            <div class="stem"></div>
+            <div class="dot"></div>
+            <div class="date-axis">2021</div>
+        </div>
+
+        <!-- 3. Premier stage au LAGEPP -->
+        <div class="node top fragment" data-fragment-index="2" style="--c:#598938;">
+            <div class="card">
+                <img class="logo" src="../assets/brands/logo_lagepp.png" alt="Logo du LAGEPP">
+                <div class="main">Stage de recherche</div>
+                <div class="dates">Juin. 2023</div>
+                <div class="place">LAGEPP · Lyon, France</div>
+                <div class="desc">Controle d'une bille de fer avec un champ magnétique.</div>
+            </div>
+            <div class="stem"></div>
+            <div class="dot"></div>
+            <div class="date-axis">2023</div>
+        </div>
+
+        <!-- 4. Master Sorbonne Université -->
+        <div class="node bottom fragment" data-fragment-index="3" style="--c:#277C9D;">
+            <div class="card">
+                <img class="logo" src="../assets/brands/logo_s.png" alt="Logo de Sorbonne Université">
+                <div class="main">Master Informatique &amp; Robotique</div>
+                <div class="dates">Sep. 2023 – Sep. 2025</div>
+                <div class="place">Sorbonne Université · Paris</div>
+                <div class="desc">Apprentissage automatique, traitement de la parole et robotique.</div>
+            </div>
+            <div class="stem"></div>
+            <div class="dot"></div>
+            <div class="date-axis">2023</div>
+        </div>
+
+        <!-- 5. Apprentissage Orange -->
+        <div class="node top fragment" data-fragment-index="4" style="--c:#598938;">
+            <div class="card">
+                <!-- Logo temporaire en CSS : peut être remplacé par une image officielle. -->
+                <div class="orange-logo">orange</div>
+                <div class="main">Apprenti Data Scientist</div>
+                <div class="dates">Sep. 2023 – Oct. 2025</div>
+                <div class="place">Orange · Paris, France</div>
+                <div class="desc">RAG agentique et Adaptation de LLM au wolof.</div>
+            </div>
+            <div class="stem"></div>
+            <div class="dot"></div>
+            <div class="date-axis">2023</div>
+        </div>
+
+        <!-- 6. Thèse à Université Paris Cité -->
+        <div class="node bottom current fragment" data-fragment-index="5" style="--c:#277C9D;">
+            <div class="card">
+                <div style="display:flex; justify-content:center; align-items:center; gap:8px; margin-bottom:5px;">
+                    <img class="logo" src="../assets/brands/logo-pariscite-rouge.png" alt="Université Paris Cité logo" style="margin:0; max-width:74px;">
+                    <img class="logo" src="../assets/brands/logo_llf.png" alt="LLF logo" style="margin:0; max-width:58px;">
+                </div>
+                <div class="main">Doctorant</div>
+                <div class="dates">Mars. 2026 – Aujourd'hui</div>
+                <div class="place">Université Paris Cité · LLF</div>
+                <div class="desc">Modèles de parole pour les langues peu dotées.</div>
+            </div>
+            <div class="stem"></div>
+            <div class="dot"></div>
+            <div class="date-axis">2026</div>
+        </div>
+
+    </div>
+</div>
+
+</div>

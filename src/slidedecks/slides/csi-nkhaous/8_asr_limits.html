@@ -1,0 +1,81 @@
+<div class="csi-slide thesis-context-slide">
+
+<style>
+.thesis-context-slide .context-list {
+    width: 88%;
+    margin: 52px auto 0;
+}
+
+.thesis-context-slide .context-item {
+    display: grid;
+    grid-template-columns: 14px 1fr;
+    gap: 18px;
+    margin-bottom: 31px;
+    text-align: left;
+}
+
+.thesis-context-slide .context-marker {
+    width: 10px;
+    height: 10px;
+    margin-top: 9px;
+    border-radius: 50%;
+    background: var(--c);
+    box-shadow: 0 0 0 5px color-mix(in srgb, var(--c) 16%, transparent);
+}
+
+.thesis-context-slide .context-heading {
+    margin-bottom: 7px;
+    color: var(--c);
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.thesis-context-slide .context-text {
+    color: #35444c;
+    font-size: 18px;
+    line-height: 1.42;
+}
+
+.thesis-context-slide .models {
+    color: #667780;
+    font-size: 15px;
+    font-weight: bold;
+}
+</style>
+
+<p class="titlebox">Contexte et motivation de la thèse</p>
+
+<div class="context-list">
+    <div class="context-item fragment" data-fragment-index="0" style="--c:#277C9D;">
+        <span class="context-marker"></span>
+        <div>
+            <div class="context-heading">Des modèles de parole très performants</div>
+            <div class="context-text">
+                Les réseaux profonds, les Transformers et l'apprentissage auto-supervisé ont permis de construire des modèles particulièrement efficaces après adaptation, notamment pour la transcription automatique.
+                <span class="models">wav2vec&nbsp;2.0 · HuBERT · WavLM</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="context-item fragment" data-fragment-index="1" style="--c:#c85a26;">
+        <span class="context-marker"></span>
+        <div>
+            <div class="context-heading">Des performances encore très variables</div>
+            <div class="context-text">
+                Une variation du microphone, du bruit, des caractéristiques du locuteur, de la langue ou de l'accent peut provoquer une dégradation considérable des performances.
+            </div>
+        </div>
+    </div>
+
+    <div class="context-item fragment" data-fragment-index="2" style="--c:#598938;">
+        <span class="context-marker"></span>
+        <div>
+            <div class="context-heading">Le positionnement de la thèse</div>
+            <div class="context-text">
+                Dans les contextes peu dotés, nous étudions les représentations internes de ces modèles afin de comprendre leur sensibilité aux variations et de développer des systèmes plus robustes.
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>

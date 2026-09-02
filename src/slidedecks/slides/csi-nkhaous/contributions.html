@@ -1,0 +1,288 @@
+<div class="contrib-slide">
+
+<style>
+.contrib-slide {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: "Computer Modern Sans", Arial, sans-serif;
+    color: #1f2a30;
+}
+
+.contrib-slide * {
+    box-sizing: border-box;
+}
+
+.contrib-slide .titlebox {
+    margin: 0;
+    padding: 10px;
+    border-radius: .3em .3em 0 0;
+    background-color: #62BCDD;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contrib-slide .subtitlebox {
+    margin: 0 0 14px;
+    padding: 8px;
+    border-radius: 0 0 .3em .3em;
+    background-color: #d7eaf1;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contrib-slide .summary {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-bottom: 17px;
+    color: #6a7780;
+    font-size: 13px;
+}
+
+.contrib-slide .summary-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.contrib-slide .summary-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.contrib-slide .summary-dot.published {
+    background: #277C9D;
+}
+
+.contrib-slide .summary-dot.revision {
+    border: 2px dashed #598938;
+    background: white;
+}
+
+.contrib-slide .articles {
+    position: relative;
+    width: 91%;
+    margin: 0 auto;
+}
+
+.contrib-slide .rail {
+    position: absolute;
+    top: 25px;
+    bottom: 25px;
+    left: 23px;
+    width: 2px;
+    background: #dde5e9;
+}
+
+.contrib-slide .article {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    margin-bottom: 14px;
+}
+
+.contrib-slide .node {
+    z-index: 1;
+    display: flex;
+    flex: 0 0 48px;
+    justify-content: center;
+    padding-top: 16px;
+}
+
+.contrib-slide .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.contrib-slide .circle.published {
+    background: #277C9D;
+    color: white;
+}
+
+.contrib-slide .circle.revision {
+    border: 2px dashed #598938;
+    background: white;
+    color: #598938;
+}
+
+.contrib-slide .article-card {
+    flex: 1 1 auto;
+    min-height: 132px;
+    padding: 14px 18px;
+    border: 1px solid #e4ebee;
+    border-left: 5px solid #277C9D;
+    border-radius: 11px;
+    background: white;
+    box-shadow: 2px 4px 11px rgba(0, 0, 0, 0.07);
+    text-align: left;
+}
+
+.contrib-slide .article.revision .article-card {
+    border-left-color: #598938;
+}
+
+.contrib-slide .card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.contrib-slide .article-title {
+    flex: 1 1 auto;
+    color: #1f2a30;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.25;
+}
+
+.contrib-slide .status {
+    flex: 0 0 auto;
+    padding: 4px 11px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.contrib-slide .status.published {
+    border: 1px solid #cfe3ec;
+    background: #eaf4f8;
+    color: #277C9D;
+}
+
+.contrib-slide .status.revision {
+    border: 1px solid #cfe0c4;
+    background: #eef5e9;
+    color: #598938;
+}
+
+.contrib-slide .authors {
+    margin-top: 9px;
+    color: #46555d;
+    font-size: 14px;
+}
+
+.contrib-slide .publication-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 11px;
+    color: #6a7780;
+    font-size: 13px;
+}
+
+.contrib-slide .venue {
+    padding: 4px 10px;
+    border-radius: 7px;
+    background: #f3f6f8;
+    color: #46555d;
+    font-weight: bold;
+}
+
+.contrib-slide .next-step {
+    color: #598938;
+    font-weight: bold;
+}
+</style>
+
+<p class="titlebox">Productions scientifiques</p>
+<p class="subtitlebox">Articles publiés et travaux en cours</p>
+
+<div class="summary">
+    <span class="summary-item">
+        <span class="summary-dot published"></span>
+        Article publié
+    </span>
+    <span class="summary-item">
+        <span class="summary-dot revision"></span>
+        Travaux en cours
+    </span>
+</div>
+
+<div class="articles">
+    <div class="rail"></div>
+
+    <!-- Article publié -->
+    <div class="article">
+        <div class="node">
+            <div class="circle published">1</div>
+        </div>
+
+        <div class="article-card">
+            <div class="card-header">
+                <div class="article-title">
+                    L'accent comme structure géométrique persistante dans les représentations de la parole
+                </div>
+                <span class="status published">Publié</span>
+            </div>
+
+            <div class="authors">Noureddine Khaous · Guillaume Wisniewski</div>
+
+            <div class="publication-info">
+                <span class="venue">CORIA–TALN 2026</span>
+                <span>Article scientifique</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article à resoumettre -->
+    <div class="article revision">
+        <div class="node">
+            <div class="circle revision">2</div>
+        </div>
+
+        <div class="article-card">
+            <div class="card-header">
+                <div class="article-title">
+                    Accent-Unified Representations for Robust ASR via Supervised Contrastive Learning
+                </div>
+                <span class="status revision">En cours</span>
+            </div>
+
+            <div class="authors">Noureddine Khaous · Guillaume Wisniewski</div>
+
+            <div class="publication-info">
+                <span class="venue">EMNLP 2026</span>
+                <span>Refusé</span>
+                <span class="next-step">Resoumission prévue au prochain cycle ARR</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article en préparation -->
+    <div class="article revision">
+        <div class="node">
+            <div class="circle revision">3</div>
+        </div>
+
+        <div class="article-card">
+            <div class="card-header">
+                <div class="article-title">
+                    Learning Curves and the Emergence of Speech Representations across Training Data Scales
+                </div>
+                <span class="status revision">En préparation</span>
+            </div>
+
+            <div class="authors">Noureddine Khaous · Guillaume Wisniewski</div>
+
+            <div class="publication-info">
+                <span class="venue">Article en préparation</span>
+                <span>Préentraînement de wav2vec 2.0 sur des sous-corpus VoxPopuli emboîtés de 1 à 500 h</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>

@@ -1,0 +1,22 @@
+{
+  "name": "csi-slides",
+  "version": "1.0.0",
+  "description": "Présentation du comité de suivi individuel de Noureddine Khaous",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.2.0",
+    "bootstrap": "^5.3.8",
+    "highlight.js": "^11.11.1",
+    "reveal.js": "^5.2.1"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
+}

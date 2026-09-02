@@ -1,0 +1,80 @@
+<div class="csi-slide accent-results-slide">
+
+<style>
+.accent-results-slide .results-content {
+    display: grid;
+    grid-template-rows: 1fr 1.28fr;
+    gap: 14px;
+    width: 95%;
+    margin: 20px auto 0;
+}
+
+.accent-results-slide .result-figure {
+    position: relative;
+    padding: 10px 14px 7px;
+    border: 1px solid #dfe7ea;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, .06);
+}
+
+.accent-results-slide .figure-label {
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    z-index: 2;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: var(--c);
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.accent-results-slide .result-figure img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    margin: 0;
+    object-fit: contain;
+}
+
+.accent-results-slide .result-figure.correlation img {
+    height: 235px;
+}
+
+.accent-results-slide .paper-conclusion {
+    width: 92%;
+    margin: 17px auto 0;
+    padding: 12px 20px;
+    border-left: 6px solid #c85a26;
+    border-radius: 8px;
+    background: #fbf1e9;
+    color: #854b2f;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+}
+</style>
+
+<p class="titlebox">L'accent persiste dans les représentations de la parole</p>
+
+<div class="results-content">
+    <div class="result-figure" style="--c:#598938;">
+        <div class="figure-label">Structure accentuelle persistante</div>
+        <img src="../assets/figures/csi-nkhaous/accent_intra_inter.png"
+             alt="Distances intra et inter-clusters au fil des couches de Whisper et wav2vec 2.0">
+    </div>
+
+    <div class="result-figure correlation" style="--c:#277C9D;">
+        <div class="figure-label">Distance au natif → erreurs de transcription</div>
+        <img src="../assets/figures/csi-nkhaous/accent_correlation.png"
+             alt="Corrélation entre distance au centroïde natif américain et taux d'erreur sur les mots">
+    </div>
+</div>
+
+<div class="paper-conclusion">
+    Plus un accent est éloigné de la référence native dans l'espace des représentations, plus le taux d'erreur augmente.
+</div>
+
+</div>
