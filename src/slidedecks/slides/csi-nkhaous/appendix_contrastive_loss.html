@@ -1,0 +1,82 @@
+<div class="csi-slide contrastive-loss-slide">
+    <style>
+        .contrastive-loss-slide .appendix-label {
+            margin: 24px 0 8px;
+            color: #6b7780;
+            font-size: 17px;
+            font-weight: 600;
+            letter-spacing: .08em;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .contrastive-loss-slide .formula-box {
+            width: 88%;
+            margin: 38px auto 34px;
+            padding: 34px 22px;
+            border-left: 6px solid #277C9D;
+            background: #f6f9fa;
+            color: #18242b;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 28px;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .contrastive-loss-slide .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            vertical-align: middle;
+        }
+
+        .contrastive-loss-slide .fraction .numerator {
+            padding: 0 8px 3px;
+            border-bottom: 2px solid #18242b;
+        }
+
+        .contrastive-loss-slide .fraction .denominator {
+            padding-top: 3px;
+        }
+
+        .contrastive-loss-slide .definitions {
+            width: 82%;
+            margin: 0 auto;
+            color: #35444c;
+            font-size: 19px;
+            line-height: 1.55;
+            text-align: left;
+        }
+
+        .contrastive-loss-slide .definitions p {
+            margin: 12px 0;
+        }
+
+        .contrastive-loss-slide .symbol {
+            color: #277C9D;
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: 700;
+        }
+    </style>
+
+    <p class="titlebox">Annexe · Perte contrastive supervisée</p>
+    <div class="appendix-label">Supervised Contrastive Loss</div>
+
+    <div class="formula-box">
+        ℒ<sub>sup</sub> =
+        ∑<sub>i∈I</sub>
+        − <span class="fraction"><span class="numerator">1</span><span class="denominator">|P(i)|</span></span>
+        ∑<sub>p∈P(i)</sub>
+        log
+        <span class="fraction">
+            <span class="numerator">exp(z<sub>i</sub> · z<sub>p</sub> / τ)</span>
+            <span class="denominator">∑<sub>a∈A(i)</sub> exp(z<sub>i</sub> · z<sub>a</sub> / τ)</span>
+        </span>
+    </div>
+
+    <div class="definitions">
+        <p><span class="symbol">P(i)</span> : exemples positifs partageant le même contenu linguistique que l'ancre <em>i</em>, indépendamment du locuteur ou de l'accent.</p>
+        <p><span class="symbol">A(i)</span> : tous les autres exemples du batch, à l'exception de l'ancre.</p>
+        <p><span class="symbol">z</span> : représentation normalisée · <span class="symbol">τ</span> : température.</p>
+    </div>
+</div>
